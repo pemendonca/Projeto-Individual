@@ -1,0 +1,10 @@
+body {
+margin: 0;
+
+}
+
+.imagem_fundo img{
+
+    height: 725px;
+    width: 100%;
+}
