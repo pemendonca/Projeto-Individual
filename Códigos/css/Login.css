@@ -38,8 +38,120 @@ body {
 
 
 .card_login_informacoes .login p {
-
+    color: #084561;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    height: 110px;
+    width: 95px;
     display: flex;
     flex-direction: row-reverse;
+    
 }
 
+.card_login_informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    gap: 25px
+}
+
+.informacoes_usuario {
+    
+    margin-top: -100px;
+    
+}
+
+.card_login_informacoes .informacoes_usuario p {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 0;
+}
+
+
+
+.card_login_informacoes .informacoes_usuario img {
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+}
+
+
+
+.card_login_informacoes .informacoes_senha p {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 0;
+    
+}
+
+.card_login_informacoes .informacoes_senha img {
+    height: 520px;
+    width: 347px;
+    background-size: cover;
+    
+}
+
+.card_login_informacoes .informacoes_usuario input {
+    display: flex;
+    background-image: url(../imagens/imagensLogin/image\ 5.png);
+    background-repeat: no-repeat;
+    background-position: 0rem center;
+    padding-left: 35px;
+    height: 45px;
+    width: 195px;
+    border: none;
+    outline: none;
+    border-bottom: 2px black solid;
+    background-color: transparent;
+    background-size: 10%;
+}
+
+.card_login_informacoes .informacoes_senha input {
+    display: flex;
+    background-image: url(../imagens/imagensLogin/image\ 4.png);
+    background-repeat: no-repeat;
+    background-position: 0rem center;
+    padding-left: 35px;
+    height: 45px;
+    width: 195px;
+    border: none;
+    outline: none;
+    border-bottom: 2px black solid;
+    background-color: transparent;
+    background-size: 10%;
+}
+
+.card_login_informacoes button {
+    background-color: #084561;
+    color: #C6C5C5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    width: 155px;
+    height: 40px;
+}
+
+
+.informacao_cadastrar {
+    display: flex;
+    font-size: 15px;
+    width: 235px;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.informacao_cadastrar button {
+    background-color: aqua;
+}
