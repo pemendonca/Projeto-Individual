@@ -4,7 +4,8 @@ body {
 }
 
 .fundo_cadastro {
-    background-color: #031F27;
+    background-image: url(../imagens/imagensCadastro/image\ 7.png);
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,10 +45,12 @@ body {
     
 }
 
-/* .card_cadastro .voltar {
-    display: flex;
-    justify-items: center;
-} */
+.fundo_cadastro i {
+    font-size: 50px;
+    color: #C6C5C5;
+}
+
+
 
 .card_cadastro .informacoes_cadastro {
     gap: 15px;
