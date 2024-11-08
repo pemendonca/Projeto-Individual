@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    
+}
+
+.fundo_cadastro {
+    background-color: #031F27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 22vh;
+    
+}
+
+.img_cadastro {
+    background-image: url(../imagens/imagensCadastro/image\ 1.png);
+    display: flex;
+    height: 100vh;
+    width: 80vh;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.card_cadastro {
+    background-color: #C6C5C5;
+    border-radius: 30px;
+    height: 200vh;
+    width: 300vh;
+    display: flex;
+    height: 90vh;
+    width: 80vh;
+    flex-direction: column;
+}
+
+.card_cadastro .cadastro p {
+    color: #042230;
+    font-size: 40px;
+    font-family:'Roboto', sans-serif;
+    width: 50vh;
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+/* .card_cadastro .voltar {
+    display: flex;
+    justify-items: center;
+} */
+
+.card_cadastro .informacoes_cadastro {
+    gap: 15px;
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    font-family:'Roboto', sans-serif;
+    color: #042230;
+    padding-left: 6vh;
+
+}
+
+.card_cadastro .informacoes_cadastro input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px black solid;
+    background-size: 10%;
+}
+
+.card_cadastro .botao_cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_cadastro .botao_cadastro button {
+    font-family:'Roboto', sans-serif;
+    background-color: #084561;
+    color: #C6C5C5;
+    border: none;
+    font-size: 22px;
+    border-radius: 5vh;
+    border: none;
+    width: 30vh;
+    height: 7vh;
+}
