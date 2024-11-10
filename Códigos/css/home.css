@@ -4,7 +4,109 @@ body {
 }
 
 
-.navBar {
+
+.navbar {
+    
     background-color: #031F27;
-    color: #C6C5C5;
+    padding: 20px 20px;
+    
+  }
+  
+.navBar {
+ display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.nome {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vh;
+    color: #C6C5C5;
+    margin-left: 6vh;
+}
+  
+.menu a {
+    color: #C6C5C5;
+    text-decoration: none;
+    margin-left: 5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    padding-right: 10vh;
+  }
+
+.card_img1 {
+    background-image: url(../imagens/imagensHome/img_fundo.png);
+    background-size: cover;
+    height: 87vh;
+    width: 119vh;
+    margin-left: 4vh;
+    margin-bottom: 16vh;
+}
+
+.card_img1 p{
+    color: #C6C5C5;
+    font-family: 'Roboto', sans-serif;
+    height: 18vh;
+    width: 78vh;
+    margin-left: 12vh;
+    margin-bottom: 2vh;
+}
+
+.card_titulo {
+    font-size: 10vh;
+    font-size: 6vh;
+    height: 16vh;
+    width: 53vh;
+    padding-top: 75px;
+}
+
+.card_conteudo {
+  font-size: 5vh;
+}
+
+.botao_login{
+    background-color: #104A4A;
+    color: #C6C5C5;
+    font-family:'Roboto', sans-serif;
+    font-size: 6vh;
+    border: none;
+    border-radius: 5vh;
+    border: none;
+    width: 39vh;
+    height: 11vh;
+    margin-left: 71vh;
+    margin-top: 16vh;
+}
+
+.card_img2 {
+    background-image: url(../imagens/imagensHome/theBoyandtheHeron.png);
+    background-size: cover;
+    width: 74vh;
+    height: 140vh;
+    margin-left: 128vh;
+    margin-top: -103vh;
+    margin-bottom: 28vh;
+    border-radius: 4vh;
+    
+}
+
+.card_img3 {
+    background-image: url(../imagens/imagensHome/princessMononoke.png);
+    background-size: cover;
+    width: 53vh;
+    height: 50vh;
+    margin-left: 70vh;
+    margin-top: -77vh;
+    margin-bottom: 10vh;
+}
+
+.card_img4 {
+    background-image: url(../imagens/imagensHome/ponyo.png);
+    background-size: cover;
+    width: 60vh;
+    height: 50vh;
+    margin-left: 4vh;
+    margin-top: -59vh;
+    margin-bottom: 4vh;
+}
+  
