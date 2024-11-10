@@ -4,44 +4,50 @@ body {
 }
 
 .fundo_cadastro {
+    min-height: 100%;
     background-image: url(../imagens/imagensCadastro/image\ 7.png);
     background-size: cover;
+    height: 99.98vh;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-right: 22vh;
     
 }
 
+
 .img_cadastro {
     background-image: url(../imagens/imagensCadastro/image\ 1.png);
-    display: flex;
-    height: 100vh;
-    width: 80vh;
+    height: 90vh;
+    width: 83vh;
     background-size: cover;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
+    flex-direction: column-reverse;
+    border-radius: 29px;
+   
 }
 
 .card_cadastro {
     background-color: #C6C5C5;
     border-radius: 30px;
-    height: 200vh;
-    width: 300vh;
-    display: flex;
     height: 90vh;
-    width: 80vh;
-    flex-direction: column;
+    width: 120vh;
+    display: flex;
+    flex-direction: row;
 }
 
+
+
 .card_cadastro .cadastro p {
-    color: #042230;
+    color: #084561;
     font-size: 40px;
     font-family:'Roboto', sans-serif;
     width: 50vh;
     display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -59,9 +65,10 @@ body {
     flex-direction: column;
     font-family:'Roboto', sans-serif;
     color: #042230;
-    padding-left: 6vh;
-
+    padding-left: 8vh;
+    padding-right: 6vh;
 }
+
 
 .card_cadastro .informacoes_cadastro input {
     background-color: transparent;
