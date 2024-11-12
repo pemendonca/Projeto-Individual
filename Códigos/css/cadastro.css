@@ -55,7 +55,11 @@ body {
     font-size: 50px;
     color: #C6C5C5;
     padding: 2vh;
+    position: absolute;
+    margin-left: -150vh;
+    margin-top: -82vh;
 }
+
 
 
 

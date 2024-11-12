@@ -32,7 +32,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 3vh;
     padding-right: 10vh;
-  }
+}
 
 .card_img1 {
     background-image: url(../imagens/imagensHome/img_fundo.png);
@@ -91,22 +91,36 @@ body {
 }
 
 .card_img3 {
-    background-image: url(../imagens/imagensHome/princessMononoke.png);
+    background-image: url(../imagens/imagensHome/princessMononoke2.png);
     background-size: cover;
     width: 53vh;
     height: 50vh;
     margin-left: 70vh;
     margin-top: -77vh;
     margin-bottom: 10vh;
+    border-radius: 4vh;
+    transition: background-image 0.3s ease;
+}
+
+.card_img3:hover {
+    background-image: url(../imagens/imagensHome/gif_princess_mononoke.webp);
+    filter: brightness(1);
+   
 }
 
 .card_img4 {
-    background-image: url(../imagens/imagensHome/ponyo.png);
+    background-image: url(../imagens/imagensHome/ponyo2.png);
     background-size: cover;
     width: 60vh;
-    height: 50vh;
+    height: 49vh;
     margin-left: 4vh;
-    margin-top: -59vh;
+    margin-top: -60vh;
     margin-bottom: 4vh;
+    border-radius: 3vh;
+    transition: background-image 0.3s ease;
+}
+
+.card_img4:hover {
+    background-image: url(../imagens/imagensHome/gifPonyo2.webp);
 }
   
