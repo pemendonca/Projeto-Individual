@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+.fundo_tela {
+    background-color: #031F27;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.imagem_principal {
+    background-image: url(../imagens/imagensPrincessMononoke/image\ 1.png);
+    background-size: cover;
+    height: 80vh;
+    width: 154vh;
+}
+
+.imagem_logo {
+    background-image: url(../imagens/imagensPrincessMononoke/logo.png);
+}
