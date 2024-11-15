@@ -3,20 +3,105 @@ body {
 }
 
 .fundo_tela {
-    background-color: #031F27;
-    height: 100vh;
+    background-color: #28454D ;
+    height: 250vh;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
 }
 
 .imagem_principal {
     background-image: url(../imagens/imagensPrincessMononoke/image\ 1.png);
     background-size: cover;
-    height: 80vh;
-    width: 154vh;
+    height: 95vh;
+    width: 170vh;
+    
 }
 
 .imagem_logo {
     background-image: url(../imagens/imagensPrincessMononoke/logo.png);
+    width: 50vh;
+    height: 21vh;
+    background-size: cover;
+    margin-left: 12vh;
+    margin-top: 66vh;
+ 
+}
+
+.imagem_principal p {
+    color: #C6C5C5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    background-color: #031F27;
+    width: 75vh;
+    margin-left: 13vh;
+}
+
+.fundo_card {
+    background-color: #031F27;
+    width: 170vh;
+    height: 157vh;
+    display: flex;
+    flex-direction: column;  
+    
+  
+}
+
+.conteudo {
+    font-family: 'Roboto', sans-serif;
+    color: #C6C5C5;
+    padding: 3vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 4vh;     
+  
+    
+  }
+
+  .poster {
+    background-image: url(../imagens/imagensPrincessMononoke/poster.png);
+    background-size: cover;
+    width: 33vh;
+    height: 50vh;
+
+}
+
+.sinopse .texto {
+    width: 126vh;
+    font-size: 3.5vh;
+}
+
+.sinopse .diretor {
+    width: 126vh;
+    font-size: 3.5vh;
+}
+  
+
+.cards_generos {
+    display: flex;
+    justify-content: space-around;
+    
+  }
+
+.cards_generos p {
+    background-color: #28454D;
+    border-radius: 5vh;
+    width: 21vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+  }
+  
+.galeria {
+    font-family: 'Roboto', sans-serif;
+    color: #C6C5C5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 6vh;
+    padding: 10vh;
+
 }
