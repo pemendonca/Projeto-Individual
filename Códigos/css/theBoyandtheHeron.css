@@ -3,8 +3,8 @@ body {
 }
 
 .fundo_tela {
-    background-color: #28454D;
-    height: 425vh;
+    background-color: #031F27;
+    height: 421vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -21,20 +21,20 @@ body {
 }
 
 .imagem_principal {
-    background-image: url(../imagens/imagensPrincessMononoke/image\ 1.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img_capa.png);
     background-size: cover;
-    height: 95vh;
-    width: 170vh;
+    height: 91vh;
+    width: 172vh;
 
 }
 
 .imagem_logo {
-    background-image: url(../imagens/imagensPrincessMononoke/logo.png);
-    width: 50vh;
+    background-image: url(../imagens/imagensTheBoyandtheHerom/logo.png);
+    width: 65vh;
     height: 21vh;
     background-size: cover;
-    margin-left: 12vh;
-    margin-top: 66vh;
+    margin-left: 11vh;
+    margin-top: 60vh;
 
 }
 
@@ -42,13 +42,12 @@ body {
     color: #C6C5C5;
     font-family: 'Roboto', sans-serif;
     font-size: 3vh;
-    background-color: #031F27;
     width: 75vh;
     margin-left: 13vh;
 }
 
 .fundo_card {
-    background-color: #031F27;
+    background-color: #28454D;
     width: 170vh;
     height: 330vh;
     display: flex;
@@ -69,7 +68,7 @@ body {
 }
 
 .poster {
-    background-image: url(../imagens/imagensPrincessMononoke/poster.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/poster.png);
     background-size: cover;
     width: 33vh;
     height: 50vh;
@@ -94,9 +93,9 @@ body {
 }
 
 .cards_generos p {
-    background-color: #28454D;
+    background-color: #031F27;
     border-radius: 5vh;
-    width: 21vh;
+    width: 26vh;
     height: 6vh;
     display: flex;
     justify-content: center;
@@ -122,21 +121,21 @@ body {
 }
 
 .img1 {
-    background-image: url(../imagens/imagensPrincessMononoke/img1.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img1.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
 }
 
 .img2 {
-    background-image: url(../imagens/imagensPrincessMononoke/img2.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img2.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
 }
 
 .img3 {
-    background-image: url(../imagens/imagensPrincessMononoke/im3.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img3.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
@@ -151,21 +150,21 @@ body {
 }
 
 .img4 {
-    background-image: url(../imagens/imagensPrincessMononoke/im4.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img4.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
 }
 
 .img5 {
-    background-image: url(../imagens/imagensPrincessMononoke/img5.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img5.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
 }
 
 .img6 {
-    background-image: url(../imagens/imagensPrincessMononoke/img6.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img6.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
@@ -179,21 +178,21 @@ body {
 }
 
 .img7 {
-    background-image: url(../imagens/imagensPrincessMononoke/img7.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img7.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
 }
 
 .img8 {
-    background-image: url(../imagens/imagensPrincessMononoke/img8.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img8.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
 }
 
 .img9 {
-    background-image: url(../imagens/imagensPrincessMononoke/img9.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img9.png);
     background-size: cover;
     width: 50vh;
     height: 28vh;
@@ -207,18 +206,18 @@ body {
 
 .img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px 5px #28454D; 
+    box-shadow: 0 0 20px 5px #031F27; 
 }
 
 .informacoes {
-    background-color: #28454D;
+    background-color: #031F27;
     display: flex;
     gap: 4vh;
     border-radius: 5vh;
 }
 
 .card_informacoes_img {
-    background-image: url(../imagens/imagensPrincessMononoke/img_card.png);
+    background-image: url(../imagens/imagensTheBoyandtheHerom/img_card.png);
     background-size: cover;
     width: 74vh;
     height: 93vh;
@@ -232,6 +231,3 @@ body {
     font-size: 4vh;
     margin-right: 7vh;
 }
-
-
-
