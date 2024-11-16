@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+}
+
+.fundo_tela {
+    background-color: #28454D;
+    height: 425vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fundo_tela i {
+    font-size: 50px;
+    color: #C6C5C5;
+    padding: 2vh;
+    position: absolute;
+    margin-left: -195vh;
+    margin-top: -82vh;
+}
+
+.imagem_principal {
+    background-image: url(../imagens/imagensPonyo/img_fundo.png);
+    background-size: cover;
+    height: 95vh;
+    width: 170vh;
+
+}
+
+.imagem_logo {
+    background-image: url(../imagens/imagensPonyo/logo.png);
+    width: 58vh;
+    height: 20vh;
+    background-size: cover;
+    margin-left: 12vh;
+    margin-top: 61vh;
+}
+
+.imagem_principal p {
+    color: #C6C5C5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    background-color: #031F27;
+    width: 75vh;
+    margin-left: 13vh;
+}
+
+.fundo_card {
+    background-color: #031F27;
+    width: 170vh;
+    height: 330vh;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.conteudo {
+    font-family: 'Roboto', sans-serif;
+    color: #C6C5C5;
+    padding: 3vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 4vh;
+
+
+}
+
+.poster {
+    background-image: url(../imagens/imagensPonyo/poster.png);
+    background-size: cover;
+    width: 33vh;
+    height: 50vh;
+
+}
+
+.sinopse .texto {
+    width: 126vh;
+    font-size: 3.5vh;
+}
+
+.sinopse .diretor {
+    width: 126vh;
+    font-size: 3.5vh;
+}
+
+
+.cards_generos {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.cards_generos p {
+    background-color: #28454D;
+    border-radius: 5vh;
+    width: 21vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+}
+
+.galeria {
+    font-family: 'Roboto', sans-serif;
+    color: #C6C5C5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 6vh;
+    padding: 10vh;
+}
+
+.galeria_fotos1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vh;
+}
+
+.img1 {
+    background-image: url(../imagens/imagensPonyo/img1.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.img2 {
+    background-image: url(../imagens/imagensPonyo/img2.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.img3 {
+    background-image: url(../imagens/imagensPonyo/img3.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.galeria_fotos2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vh;
+    padding: 5vh;
+}
+
+.img4 {
+    background-image: url(../imagens/imagensPonyo/img4.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.img5 {
+    background-image: url(../imagens/imagensPonyo/img5.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.img6 {
+    background-image: url(../imagens/imagensPonyo/img6.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.galeria_fotos3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vh;
+}
+
+.img7 {
+    background-image: url(../imagens/imagensPonyo/img7.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.img8 {
+    background-image: url(../imagens/imagensPonyo/img8.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.img9 {
+    background-image: url(../imagens/imagensPonyo/img9.png);
+    background-size: cover;
+    width: 50vh;
+    height: 28vh;
+}
+
+.img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+
+.img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 5px #28454D; 
+}
+
+.informacoes {
+    background-color: #28454D;
+    display: flex;
+    gap: 4vh;
+    border-radius: 5vh;
+}
+
+.card_informacoes_img {
+    background-image: url(../imagens/imagensPonyo/img_card.png);
+    background-size: cover;
+    width: 74vh;
+    height: 93vh;
+}
+
+.card_informacoes {
+    width: 72vh;
+}
+
+.card_informacoes_texto {
+    font-size: 4vh;
+    margin-right: 7vh;
+}
+
+
+
