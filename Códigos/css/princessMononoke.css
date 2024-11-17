@@ -12,12 +12,12 @@ body {
 }
 
 .fundo_tela i {
-    font-size: 50px;
+    font-size: 70px;
     color: #C6C5C5;
     padding: 2vh;
     position: absolute;
-    margin-left: -195vh;
-    margin-top: -82vh;
+    margin-bottom: 400vh;
+    margin-right: 190vh;
 }
 
 .imagem_principal {
@@ -207,7 +207,7 @@ body {
 
 .img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px 5px #28454D; 
+    box-shadow: 0 0 20px 5px #28454D;
 }
 
 .informacoes {
@@ -232,6 +232,3 @@ body {
     font-size: 4vh;
     margin-right: 7vh;
 }
-
-
-
