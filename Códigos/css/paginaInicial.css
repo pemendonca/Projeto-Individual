@@ -6,7 +6,7 @@ body {
 
 .navbar {
 
-    background-color: #031F27;
+    background-color: #084561;
     padding: 20px 20px;
 
 }
@@ -36,7 +36,6 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    margin-bottom: 50vh;
 }
 
 .img_fundo {
@@ -106,3 +105,93 @@ body {
     border-radius: 5vh;
 }
 
+.card_informacoes {
+    background-color: #084561;
+    border-radius: 5vh;
+    width: 155vh;
+    display: flex;
+    gap: 7vh;
+    margin: 10vh;
+}
+
+.card_img {
+    background-image: url(../imagens/imgansTelaPrincipal/hayao_myiazaki.png);
+    background-size: cover;
+    width: 90vh;
+    height: 119vh;
+    border-radius: 5vh;
+ }
+
+ .card_informacoes .titulo {
+    font-family: 'Roboto', sans-serif;
+    color: #031F27;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+ }
+
+ .card_informacoes .texto {
+    color: #C6C5C5;
+    font-family: 'Roboto', sans-serif;
+    width: 72vh;
+    font-size: 4vh;
+    margin-right: 7vh;
+}
+
+.img_contato {
+    background-image: url(../imagens/imgansTelaPrincipal/howls_movie_castle.png); 
+    width: 210vh;
+    height: 120vh;
+    background-size: cover;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00394d; /* Azul escuro */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    width: 205vh;
+    height: 20vh;
+  }
+  
+  .footer .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .logo img {
+    width: 21vh;
+   
+  }
+  
+  .footer .telefone,
+  .footer .contatos {
+    text-align: center;
+  }
+  
+  .footer .telefone h3,
+  .footer .contatos h3 {
+    font-size: 3vh;
+  }
+  
+  .footer .icons {
+    display: flex;
+    gap: 5vh;
+    justify-content: center;
+  }
+  
+  .footer .icons a img {
+    width: 5vh;
+    height: 5vh;
+    transition: transform 0.3s;
+  }
+  
+  .footer .icons a img:hover {
+    transform: scale(1.1); 
+  }
+  
