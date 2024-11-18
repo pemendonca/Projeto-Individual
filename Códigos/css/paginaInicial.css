@@ -54,10 +54,15 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 3vh;
     color: #ffffff;
+    background-color: #084561;
+    border-radius: 3vh;
     margin-left: 35vh;
     width: 111vh;
     text-align: center;
     margin-right: 34vh;
+    height: 15vh;
+    align-items: center;
+    display: flex;
 }
 
 .card_filmes {
@@ -149,7 +154,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #00394d; /* Azul escuro */
+    background-color: #084561;; /* Azul escuro */
     color: #fff; /* Texto branco */
     padding: 20px;
     font-family: 'Roboto', sans-serif;
