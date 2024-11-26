@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Definindo a codificação de caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Definindo a largura da tela para mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página da dashboard -->
+    <title>Dashboard - Popularidade dos Filmes</title>
+    <!-- Importando fontes do Google Fonts para estilização do texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Estilo personalizado da dashboard -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Importando o Chart.js para criar gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body onload="initDashboard()">
+    <header>
+        <div class="container">
+            <!-- Botão para voltar à página inicial -->
+            <button class="voltar-btn" onclick="location.href='paginaInicial.html'">Voltar</button>
+            <h1>Dashboard de Filmes</h1>
+        </div>
+    </header>
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                <!-- Exibindo as KPIs (Key Performance Indicators) -->
+                <div class="kpis">
+                    <div class="kpi">
+                        <h4>Quantidade Total de Participantes</h4>
+                        <!-- Exibe o total de participantes no quiz -->
+                        <p id="totalParticipantes"></p>
+                    </div>
+
+                    <div class="kpi">
+                        <h4>Percentual de Popularidade do Filme</h4>
+                        <!-- Exibe o percentual de popularidade do filme mais votado -->
+                        <p id="percentual_popularidade"></p>
+                    </div>
+                </div>
+
+                <!-- Seção do gráfico de popularidade -->
+                <div class="grafico">
+                    <h2>Popularidade dos Filmes</h2>
+                    <!-- O gráfico será exibido aqui -->
+                    <canvas id="grafico-popularidade"></canvas>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Inicializando o gráfico com Chart.js
+        const ctx = document.getElementById('grafico-popularidade').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar', // O gráfico é do tipo barra
+            data: {
+                labels: [], // Labels serão preenchidos dinamicamente
+                datasets: [{
+                    label: 'Popularidade (%)',
+                    data: [], // Dados serão preenchidos dinamicamente
+                    backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+                    borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, // Faz o gráfico ser responsivo
+                plugins: {
+                    legend: {
+                        position: 'top' // Define a posição da legenda
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (context) => `${context.raw}%` // Formato do tooltip para exibir o percentual
+                        }
+                    }
+                }
+            }
+        });
+
+        // Função chamada ao carregar a página para inicializar a dashboard
+        function initDashboard() {
+            TotalPessoas(); // Atualiza a KPI de Total de Participantes
+            PopularidadeFilme(); // Atualiza a KPI de Popularidade do Filme Mais Votado
+            carregarGraficoPopularidade(); // Carrega e exibe o gráfico de popularidade
+        }
+
+        // Função para atualizar a KPI de Total de Participantes
+        function TotalPessoas() {
+            fetch("/dashboard/TotalPessoas", {
+                method: "GET",
+                headers: { "Content-Type": "application/json" }
+            })
+                .then((resposta) => resposta.json())
+                .then((json) => {
+                    // Exibe o total de participantes no elemento HTML correspondente
+                    const totalParticipantesElement = document.getElementById("totalParticipantes");
+                    totalParticipantesElement.innerHTML = json[0]?.totalPessoasFizeramQuiz || "0";
+                })
+                .catch((erro) => console.error(`#ERRO TotalPessoas: ${erro}`)); // Erro no caso de falha na requisição
+        }
+
+        // Função para atualizar a KPI de Popularidade do Filme Mais Votado
+        function PopularidadeFilme() {
+            fetch("/dashboard/percentualPopularidadeFilme", {
+                method: "GET",
+                headers: { "Content-Type": "application/json" }
+            })
+                .then((resposta) => resposta.json())
+                .then((json) => {
+                    // Exibe o percentual de popularidade do filme mais votado no elemento HTML correspondente
+                    const popularidadeElement = document.getElementById("percentual_popularidade");
+                    popularidadeElement.innerHTML = json[0]?.percentual_popularidade + "%" || "0%";
+                })
+                .catch((erro) => console.error(`#ERRO PopularidadeFilme: ${erro}`)); // Erro no caso de falha na requisição
+        }
+
+        // Função para carregar e atualizar o gráfico de popularidade com os dados mais recentes
+        function carregarGraficoPopularidade() {
+            fetch("/dashboard/totalVotos", {
+                method: "GET",
+                headers: { "Content-Type": "application/json" }
+            })
+                .then((resposta) => resposta.json())
+                .then((data) => {
+                    // Extrai os filmes e suas respectivas popularidades
+                    const labels = data.map((item) => item.filme);
+                    const values = data.map((item) => item.percentual_popularidade);
+
+                    // Atualiza o gráfico com os novos dados
+                    atualizarGrafico(myChart, labels, values);
+                })
+                .catch((erro) => console.error(`#ERRO carregarGraficoPopularidade: ${erro}`)); // Erro no caso de falha na requisição
+        }
+
+        // Função para atualizar os dados no gráfico
+        function atualizarGrafico(chart, labels, values) {
+            chart.data.labels = labels; // Atualiza as labels (nomes dos filmes)
+            chart.data.datasets[0].data = values; // Atualiza os valores (percentuais de popularidade)
+            chart.update(); // Atualiza o gráfico com os novos dados
+        }
+    </script>
+</body>
+
+</html>

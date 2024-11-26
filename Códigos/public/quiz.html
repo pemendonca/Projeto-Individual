@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Hayao Miyazaki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="voltar">
+            <i class="fa-solid fa-arrow-left" onclick="location.href='paginaInicial.html'"></i>
+        </div>
+
+        <div id="pontuacaoEJogo">
+
+            <div id="jogo">
+                <div id="infoQuestao">
+                    <span id="contadorQuestoes">Pergunta <span id="numeroQuestaoAtual">1</span> de 10</span>
+                </div>
+                <div id="perguntaDaQuestaoAtual"></div>
+                <div id="infoAlternativas">
+                    <form id="opcoes"></form>
+                </div>
+                <button id="btnProx" onclick="proximaQuestao()">Avançar para a próxima questão</button>
+            </div>
+            <div id="resultado" style="display: none;">
+                <h2>Resultado do Quiz</h2>
+
+                <p id="filmeCombina">O filme que mais combina com você é: <strong id="resultadoFilme"></strong></p>
+
+                <!-- <button onclick="reiniciarQuiz()">Tente Novamente</button> -->
+                <button onclick="location.href='dashboard.html'">
+                    Ir para a Dashboard
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Array de perguntas do quiz
+        const perguntas = [
+            {
+                pergunta: "Qual mensagem mais te impacta em um filme?",
+                opcoes: ["Proteção da natureza", "Aventura inocente e divertida", "Reflexão sobre a vida e morte"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Qual cenário te atrai mais?",
+                opcoes: ["Floresta cheia de vida", "Mundo subaquático mágico", "Um vilarejo tranquilo e nostálgico"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Como você reage a desafios pessoais?",
+                opcoes: ["Com coragem e determinação", "Com curiosidade e otimismo", "Com introspecção e calma"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Qual tipo de história te atrai mais?",
+                opcoes: ["Uma luta épica com lições profundas", "Uma jornada mágica e infantil", "Uma narrativa contemplativa e simbólica"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Que tipo de personagem principal você prefere?",
+                opcoes: ["Forte e destemido", "Curioso e espontâneo", "Profundo e introspectivo"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Como você define um final perfeito em um filme?",
+                opcoes: ["Triunfo após muitos desafios", "Um final fofo e esperançoso", "Um final aberto para reflexão"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "O que mais te atrai visualmente?",
+                opcoes: ["Cenários realistas e detalhados", "Cores vibrantes e animação divertida", "Minimalismo e simbolismo"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Como você descreveria sua personalidade?",
+                opcoes: ["Determinado e protetor", "Divertido e sonhador", "Quieto e pensativo"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Você prefere filmes com qual abordagem?",
+                opcoes: ["História cheia de ação", "Foco na inocência e na família", "Uma experiência contemplativa"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+            {
+                pergunta: "Qual emoção você gosta de sentir ao assistir um filme?",
+                opcoes: ["Inspirado e motivado", "Alegre e encantado", "Profundamente tocado"],
+                pontuacoes: { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 },
+            },
+        ];
+
+        var questaoAtual = 0;
+
+         // Array com os filmes que o quiz irá sugerir no final
+        var filmes = ["Princesa Mononoke", "Ponyo", "O Menino e a Garça"]
+
+         // Armazena as pontuações acumuladas para cada filme
+        var pontuacao = { "Princesa Mononoke": 3, "Ponyo": 2, "O Menino e a Garça": 1 };
+
+        function carregarQuestao() {
+            const questao = perguntas[questaoAtual];
+            document.getElementById("numeroQuestaoAtual").textContent = questaoAtual + 1;
+            document.getElementById("perguntaDaQuestaoAtual").textContent = questao.pergunta;
+
+            const opcoes = document.getElementById("opcoes");
+            opcoes.innerHTML = "";
+
+               // Cria e adiciona as alternativas ao formulário de opções
+            questao.opcoes.forEach((opcao, index) => {
+                const span = document.createElement("span");
+                const input = document.createElement("input");
+                input.type = "radio";
+                input.name = "resposta";
+                input.value = index;
+                input.id = `opcao${index}`;
+
+                span.appendChild(input);
+                span.appendChild(document.createTextNode(opcao));
+                opcoes.appendChild(span);
+            });
+        }
+
+        function proximaQuestao() {
+               // Verifica qual alternativa foi selecionada
+            const respostaSelecionada = document.querySelector('input[name="resposta"]:checked');
+            if (!respostaSelecionada) {
+                alert("Por favor, selecione uma resposta!");
+                return;
+            }
+
+            const indiceResposta = parseInt(respostaSelecionada.value);
+            const pontuacoes = perguntas[questaoAtual].pontuacoes;
+
+            // Atualiza a pontuação somente para o filme correto baseado na resposta selecionada
+            const filmes = Object.keys(pontuacoes);
+            const filmeSelecionado = filmes[indiceResposta];
+            const pontuacaoSelecionada = pontuacoes[filmeSelecionado];
+
+             // Atualiza a pontuação do filme com base na resposta selecionada
+            pontuacao[filmeSelecionado] += pontuacaoSelecionada; 
+
+            questaoAtual++;
+
+            if (questaoAtual < perguntas.length) {
+                carregarQuestao();
+                // Se todas as questões forem respondidas, exibe o resultado
+            } else {
+                document.getElementById("jogo").style.display = "none";
+                document.getElementById("resultado").style.display = "block";
+                calcularResultado();
+            }
+        }
+        // Calcula qual filme teve a maior pontuação e exibe o resultado
+        function calcularResultado() {
+            console.log(sessionStorage)
+            const filmeMaisCombina = Object.keys(pontuacao).reduce((a, b) => (pontuacao[a] > pontuacao[b] ? a : b));
+            document.getElementById("resultadoFilme").textContent = filmeMaisCombina;
+
+            fetch("/quiz/perguntas", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          emailServer: sessionStorage.EMAIL_USUARIO,
+          resultadoFilmeServer: filmeMaisCombina,
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+  
+          if (resposta.ok) {
+            // cardErro.style.display = "block";
+  
+            // mensagem_erro.innerHTML =
+            //   "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+  
+            // setTimeout(function() {
+            //   window.location = "./dashboard.html";
+            // }, 2000);
+  
+          } else {
+            throw "Houve um erro ao tentar entrar na dashboard!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+   
+        });
+  
+      return false;
+    }
+  
+    function sumirMensagem() {
+      cardErro.style.display = "none";
+    }
+
+        // Reinicia o quiz, zerando as pontuações e voltando à primeira questão
+        // function reiniciarQuiz() {
+        //     questaoAtual = 0;
+        //     pontuacao = { "Princesa Mononoke": 0, "Ponyo": 0, "O Menino e a Garça": 0 };
+        //     document.getElementById("resultado").style.display = "none";
+        //     document.getElementById("jogo").style.display = "block";
+        //     carregarQuestao();
+
+        // }
+
+        window.onload = carregarQuestao;
+        // Chama a função carregarQuestao assim que a página for carregada
+    </script>
+</body>
+
+</html>

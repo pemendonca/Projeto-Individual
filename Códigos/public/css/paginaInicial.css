@@ -53,16 +53,14 @@ body {
 .texto_fundo {
     font-family: 'Roboto', sans-serif;
     font-size: 3vh;
-    color: #ffffff;
+    color: white;
     background-color: #084561;
     border-radius: 3vh;
-    margin-left: 35vh;
-    width: 111vh;
-    text-align: center;
-    margin-right: 34vh;
-    height: 15vh;
-    align-items: center;
+    margin: 29vh;
+    padding: 3vh;
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .card_filmes {
@@ -71,6 +69,7 @@ body {
     justify-content: center;
     gap: 20vh;
     margin-top: 5vh;
+    filter: brightness(80%);
 }
 
 .ponyo img {

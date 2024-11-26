@@ -6,21 +6,70 @@ body {
     background-color: #031F27;
 }
 
+.cardImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .img_principal {
     background-image: url(../imagens/imagensSobre/img_fundo.png);
     background-size: cover;
-    width: 165vh;
-    height: 120vh;
+    width: 115vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .sobre_mim {
-    background-color: #031F27;
     color: #C6C5C5;
+    background-color: #28454D;
     font-family: 'Roboto', sans-serif;
-    padding: 15vh;
-    width: 120vh;
+    padding: 10vh;
+    width: 100%;
     font-size: 4vh;
+    margin-top: 10vh;
+    
 }
+
+ .meuNome {
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+} 
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 3vh;
+    margin-bottom: 5vh;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.menu a:hover::after {
+    width: 100%; 
+}
+
+
 
 .fotografias p {
     font-weight: bold;
@@ -29,7 +78,7 @@ body {
 .fotografias {
     color: #C6C5C5;
     margin: 5vh;
-    font-size: 2vh;
+    font-size: 3vh;
     margin: 10vh;
     width: 130vh;
     margin-left: 40vh;
